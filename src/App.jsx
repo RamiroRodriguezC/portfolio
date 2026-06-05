@@ -8,14 +8,16 @@ import Footer from "./components/Footer.jsx";
 
 export default function App() {
   return (
-    <>
-      <NavBar />
-      <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
-    </>
+    <div className="flex justify-center w-full">
+      <div className="mx-8" >
+        <NavBar />
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    </div>
   );
 }

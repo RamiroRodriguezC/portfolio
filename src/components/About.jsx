@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <Section id="about" subtitle={t("about.subtitle")} title={t("about.title")}>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 w-full max-w-5xl mx-auto">
         {/* — ME — grande izquierda — 6 cols */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
