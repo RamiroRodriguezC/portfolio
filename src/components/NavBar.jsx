@@ -25,38 +25,48 @@ export default function NavBar() {
 
   return (
     <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      
+      className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-5 px-6"
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-semibold tracking-tight">
+      {/* Desktop pill */}
+      <div
+        className={`hidden md:flex items-center gap-8 px-6 py-3 rounded-2xl border transition-all duration-300 ${
+          scrolled
+            ? "bg-background/80 backdrop-blur-md border-border"
+            : "bg-card/60 backdrop-blur-sm border-border/50"
+        }`}
+      >
+        <a href="#" className="text-sm font-semibold tracking-tight mr-2">
           {t("nav.brand")}
         </a>
-
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              {link.label}
-            </a>
-          ))}
-          <button
-            onClick={toggleLang}
-            className="text-xs font-medium text-primary hover:text-primary/80 transition-colors uppercase"
+        {navLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
           >
-            {i18n.language === "es" ? "EN" : "ES"}
-          </button>
-        </div>
+            {link.label}
+          </a>
+        ))}
+        <button
+          onClick={toggleLang}
+          className="text-xs font-medium text-primary hover:text-primary/80 transition-colors uppercase ml-2"
+        >
+          {i18n.language === "es" ? "EN" : "ES"}
+        </button>
+      </div>
 
-        <div className="flex items-center gap-4 md:hidden">
+      {/* Mobile bar */}
+      <div className="md:hidden w-full flex items-center justify-between px-4 py-3 rounded-2xl border bg-card/60 backdrop-blur-sm border-border/50">
+        <a href="#" className="text-sm font-semibold tracking-tight">
+          {t("nav.brand")}
+        </a>
+        <div className="flex items-center gap-4">
           <button
             onClick={toggleLang}
-            className="text-xs font-medium text-primary hover:text-primary/80 transition-colors uppercase"
+            className="text-xs font-medium text-primary uppercase"
           >
             {i18n.language === "es" ? "EN" : "ES"}
           </button>
@@ -65,18 +75,9 @@ export default function NavBar() {
             className="relative w-6 h-5 flex flex-col justify-between"
             aria-label="Toggle menu"
           >
-            <motion.span
-              animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block h-0.5 w-full bg-foreground rounded"
-            />
-            <motion.span
-              animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block h-0.5 w-full bg-foreground rounded"
-            />
-            <motion.span
-              animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block h-0.5 w-full bg-foreground rounded"
-            />
+            <motion.span animate={mobileOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }} className="block h-0.5 w-full bg-foreground rounded" />
+            <motion.span animate={mobileOpen ? { opacity: 0 } : { opacity: 1 }} className="block h-0.5 w-full bg-foreground rounded" />
+            <motion.span animate={mobileOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }} className="block h-0.5 w-full bg-foreground rounded" />
           </button>
         </div>
       </div>
@@ -87,9 +88,9 @@ export default function NavBar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden bg-background/95 backdrop-blur-md border-b border-border"
+            className="absolute top-full left-6 right-6 mt-2 md:hidden overflow-hidden bg-card border border-border rounded-2xl"
           >
-            <div className="flex flex-col px-6 pb-6 gap-4">
+            <div className="flex flex-col px-6 py-4 gap-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}

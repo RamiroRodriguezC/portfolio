@@ -8,7 +8,7 @@ export default function Experience() {
 
   return (
     <Section id="experience" subtitle={t("experience.subtitle")} title={t("experience.title")}>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl">
         {items.map((exp, i) => (
           <ExperienceCard key={i} experience={exp} index={i} />
         ))}

@@ -9,7 +9,7 @@ import Footer from "./components/Footer.jsx";
 export default function App() {
   return (
     <div className="flex justify-center w-full">
-      <div className="mx-8" >
+      <div className="w-full max-w-[1440px]">
         <NavBar />
         <Hero />
         <About />

@@ -5,12 +5,12 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="pt-24 pb-16 relative overflow-hidden">
+    <section className="relative flex items-center justify-center overflow-hidden md:h-[711px] max-md:min-h-[100svh] px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 pointer-events-none" />
+      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 pointer-events-none" />
 
-      <div className="max-w-3xl mx-auto text-center relative z-10">
+      <div className="w-full max-w-3xl mx-auto text-center relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

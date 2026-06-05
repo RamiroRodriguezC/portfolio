@@ -25,7 +25,7 @@ export default function About() {
 
   return (
     <Section id="about" subtitle={t("about.subtitle")} title={t("about.title")}>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-4 w-full max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
         {/* — ME — grande izquierda — 6 cols */}
         <motion.button
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function About() {
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
           onClick={() => setModal("me")}
-          className="md:col-span-6 bg-card border border-border rounded-2xl p-6 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-center gap-4 min-h-[280px]"
+          className="md:col-span-6 bg-card border border-border rounded-2xl p-6 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-center gap-4 min-h-[350px] md:min-h-[500px]"
         >
           <div className="w-24 h-24 rounded-full bg-muted flex items-center justify-center">
             <svg className="w-12 h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
@@ -44,7 +44,7 @@ export default function About() {
         </motion.button>
 
         {/* — CONTENEDOR DERECHO — apilado, 6 cols con sub-grid */}
-        <div className="md:col-span-6 grid grid-cols-1 gap-4">
+        <div className="md:col-span-6 grid grid-cols-1 gap-6">
           {/* — STATUS — chica horizontal */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
