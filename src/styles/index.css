@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: oklch(0.63 0.24 285);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.55 0.22 310);
+  --color-secondary-foreground: oklch(1 0 0);
+
+  --color-background: oklch(0.145 0 0);
+  --color-foreground: oklch(0.985 0 0);
+  --color-muted: oklch(0.25 0 0);
+  --color-muted-foreground: oklch(0.6 0 0);
+  --color-card: oklch(0.205 0 0);
+  --color-card-foreground: oklch(0.985 0 0);
+  --color-border: oklch(0.3 0 0);
+  --color-destructive: oklch(0.55 0.25 25);
+  --color-accent: oklch(0.63 0.24 285);
+  --color-accent-foreground: oklch(1 0 0);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+}
+
+:root {
+  --color-primary: oklch(0.63 0.24 285);
+  --color-primary-foreground: oklch(1 0 0);
+  --color-secondary: oklch(0.55 0.22 310);
+  --color-secondary-foreground: oklch(1 0 0);
+
+  --color-background: oklch(0.145 0 0);
+  --color-foreground: oklch(0.985 0 0);
+  --color-muted: oklch(0.25 0 0);
+  --color-muted-foreground: oklch(0.6 0 0);
+  --color-card: oklch(0.205 0 0);
+  --color-card-foreground: oklch(0.985 0 0);
+  --color-border: oklch(0.3 0 0);
+  --color-destructive: oklch(0.55 0.25 25);
+  --color-accent: oklch(0.63 0.24 285);
+  --color-accent-foreground: oklch(1 0 0);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}

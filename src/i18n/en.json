@@ -1,0 +1,115 @@
+{
+  "nav": {
+    "brand": "Portfolio",
+    "about": "About",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Full-Stack Developer",
+    "heading": "Building web experiences that",
+    "headingAccent": "leave a mark",
+    "description": "I'm Ramiro, a web developer passionate about building digital products with React, clean design, and good practices.",
+    "cta": "See my work"
+  },
+  "about": {
+    "subtitle": "About me",
+    "title": "About me",
+    "clickMe": "Click to see more",
+    "status": {
+      "title": "Status",
+      "available": "Open to work"
+    },
+    "techStack": {
+      "title": "My Stack"
+    },
+    "currentProject": {
+      "title": "Current project",
+      "name": "Personal portfolio",
+      "description": "Building my portfolio with React + Vite + Tailwind + Framer Motion"
+    },
+    "cv": "Download CV",
+    "cvTitle": "Resume",
+    "cvDescription": "Check my professional background and education.",
+    "meModal": {
+      "title": "Ramiro",
+      "description": "Web developer passionate about creating unique digital experiences."
+    }
+  },
+  "experience": {
+    "subtitle": "Journey",
+    "title": "Work experience",
+    "items": [
+      {
+        "role": "Experience 1",
+        "company": "Company",
+        "period": "Period",
+        "description": "Job description."
+      },
+      {
+        "role": "Experience 2",
+        "company": "Company",
+        "period": "Period",
+        "description": "Job description."
+      },
+      {
+        "role": "Experience 3",
+        "company": "Company",
+        "period": "Period",
+        "description": "Job description."
+      }
+    ]
+  },
+  "projects": {
+    "subtitle": "Projects",
+    "title": "Some recent work",
+    "items": [
+      {
+        "title": "Project 1",
+        "description": "Project description.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Project 2",
+        "description": "Project description.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Project 3",
+        "description": "Project description.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Project 4",
+        "description": "Project description.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      }
+    ],
+    "placeholder": "Project Image",
+    "cta": "View project"
+  },
+  "contact": {
+    "subtitle": "Contact",
+    "title": "Got a project in mind?",
+    "description": "If you like what you see and want to build something together, reach out. I'm always open to chat about new ideas.",
+    "cta": "Copy my email"
+  },
+  "footer": {
+    "madeWith": "Made with React + Vite + Tailwind + Framer Motion"
+  },
+  "skills": [
+    "React",
+    "JavaScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "Git",
+    "UI/UX Design",
+    "TypeScript"
+  ]
+}

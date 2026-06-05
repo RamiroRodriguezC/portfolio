@@ -1,0 +1,115 @@
+{
+  "nav": {
+    "brand": "Portfolio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "testimonials": "Testimonios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Full-Stack Developer",
+    "heading": "Creando experiencias web que",
+    "headingAccent": "dejan huella",
+    "description": "Soy Ramiro, desarrollador web apasionado por construir productos digitales con React, diseño limpio y buenas prácticas.",
+    "cta": "Ver proyectos"
+  },
+  "about": {
+    "subtitle": "Sobre mí",
+    "title": "Acerca de mí",
+    "clickMe": "Hacé clic para ver más",
+    "status": {
+      "title": "Disponibilidad",
+      "available": "Abierto a propuestas"
+    },
+    "techStack": {
+      "title": "Mi Stack"
+    },
+    "currentProject": {
+      "title": "Proyecto actual",
+      "name": "Portfolio personal",
+      "description": "Construyendo mi portfolio con React + Vite + Tailwind + Framer Motion"
+    },
+    "cv": "Descargar CV",
+    "cvTitle": "Currículum",
+    "cvDescription": "Conocé mi trayectoria y formación profesional.",
+    "meModal": {
+      "title": "Ramiro",
+      "description": "Desarrollador web apasionado por crear experiencias digitales únicas."
+    }
+  },
+  "experience": {
+    "subtitle": "Trayectoria",
+    "title": "Experiencia laboral",
+    "items": [
+      {
+        "role": "Experiencia 1",
+        "company": "Empresa",
+        "period": "Periodo",
+        "description": "Descripción del puesto."
+      },
+      {
+        "role": "Experiencia 2",
+        "company": "Empresa",
+        "period": "Periodo",
+        "description": "Descripción del puesto."
+      },
+      {
+        "role": "Experiencia 3",
+        "company": "Empresa",
+        "period": "Periodo",
+        "description": "Descripción del puesto."
+      }
+    ]
+  },
+  "projects": {
+    "subtitle": "Proyectos",
+    "title": "Algunos trabajos recientes",
+    "items": [
+      {
+        "title": "Proyecto 1",
+        "description": "Descripción del proyecto.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Proyecto 2",
+        "description": "Descripción del proyecto.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Proyecto 3",
+        "description": "Descripción del proyecto.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      },
+      {
+        "title": "Proyecto 4",
+        "description": "Descripción del proyecto.",
+        "tags": ["Tag"],
+        "liveUrl": "#"
+      }
+    ],
+    "placeholder": "Imagen del proyecto",
+    "cta": "Ver proyecto"
+  },
+  "contact": {
+    "subtitle": "Contacto",
+    "title": "¿Tenés un proyecto en mente?",
+    "description": "Si te gusta lo que viste y querés construir algo juntos, escribime. Siempre estoy abierto a charlar sobre nuevas ideas.",
+    "cta": "Copiar mi email"
+  },
+  "footer": {
+    "madeWith": "Hecho con React + Vite + Tailwind + Framer Motion"
+  },
+  "skills": [
+    "React",
+    "JavaScript",
+    "Tailwind CSS",
+    "Framer Motion",
+    "Node.js",
+    "Git",
+    "UI/UX Design",
+    "TypeScript"
+  ]
+}
