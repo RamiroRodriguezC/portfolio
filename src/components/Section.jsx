@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 export default function Section({ id, title, subtitle, children, className = "" }) {
   return (
-   <section id={id} className={`py-20 ${className}`}>
-      <div className="">
+    <section id={id} className={`py-24 ${className}`}>
+  <div className="w-full max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       {(title || subtitle) && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -102,7 +102,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.3 }}
-          className="md:col-span-4 bg-card border border-border rounded-2xl p-5 flex flex-col justify-between"
+          className="md:col-span-4 bg-card border border-border rounded-2xl p-5 flex flex-col justify-between min-h-[225px] md:min-h-[350px]"
         >
           <div>
             <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center mb-3">
@@ -124,7 +124,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, delay: 0.35 }}
-          className="md:col-span-8 bg-card border border-border rounded-2xl p-5"
+          className="md:col-span-8 bg-card border border-border rounded-2xl p-5 flex flex-col justify-between min-h-[225px] md:min-h-[350px]"
         >
           <h3 className="text-sm font-semibold mb-2">{t("about.currentProject.title")}</h3>
           <p className="text-sm text-muted-foreground mb-2">{t("about.currentProject.name")}</p>
