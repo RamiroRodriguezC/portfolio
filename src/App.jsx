@@ -1,10 +1,10 @@
-import NavBar from "./components/NavBar.jsx";
-import Hero from "./components/Hero.jsx";
-import About from "./components/About.jsx";
-import Experience from "./components/Experience.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import NavBar from "./components/layout/NavBar.jsx";
+import Hero from "./components/sections/Hero.jsx";
+import About from "./components/sections/About.jsx";
+import Experience from "./components/sections/Experience.jsx";
+import Projects from "./components/sections/Projects.jsx";
+import Contact from "./components/sections/Contact.jsx";
+import Footer from "./components/layout/Footer.jsx";
 
 export default function App() {
   return (
