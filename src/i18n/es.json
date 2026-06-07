@@ -19,7 +19,9 @@
     "clickMe": "Hacé clic para ver más",
     "status": {
       "title": "Disponibilidad",
-      "available": "Abierto a propuestas"
+      "Open": "Abierto a propuestas",
+      "WorkingButOpen": "Trabajando pero abierto",
+      "Working": "Trabajando"
     },
     "techStack": {
       "title": "Mi Stack"

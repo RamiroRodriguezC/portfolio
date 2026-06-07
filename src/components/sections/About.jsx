@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { usePortfolioData } from "../../context/PortfolioDataContext.jsx";
 import Section from "../layout/Section.jsx";
 import Modal from "../modals/Modal.jsx";
 import AboutMeModal from "../modals/AboutMeModal.jsx";
@@ -14,11 +15,15 @@ import DownloadButton from "../shared/buttons/DownloadButton.jsx";
 
 export default function About() {
   const { t } = useTranslation();
+  const { data } = usePortfolioData();
   const [modal, setModal] = useState(null);
 
   const skills = t("skills", { returnObjects: true });
   const visibleSkills = skills.slice(0, 4);
   const hiddenCount = skills.length - visibleSkills.length;
+
+  const employmentStatus = data?.employmentStatus;
+  const resumeURL = data?.resumeURL;
 
   return (
     <Section id="about" subtitle={t("about.subtitle")} title={t("about.title")}>
@@ -26,7 +31,9 @@ export default function About() {
         <MeCard onOpen={() => setModal("me")} buttonText={t("about.clickMe")} />
 
         <div className="md:col-span-6 grid grid-cols-1 gap-6">
-          <StatusCard title={t("about.status.title")} subtitle={t("about.status.available")} />
+          {employmentStatus && (
+            <StatusCard title={t("about.status.title")} status={employmentStatus} />
+          )}
 
           <StackCard
             title={t("about.techStack.title")}
@@ -39,8 +46,8 @@ export default function About() {
         <CvCard 
           title={t("about.cvTitle")} 
           description={t("about.cvDescription")} 
-          actionLabel={t("about.cv")}
           onOpen={() => setModal("cv")}
+          resumeURL={resumeURL}
          />
 
         <CurrentProjectCard
@@ -56,8 +63,10 @@ export default function About() {
 
       <Modal open={modal === "cv"} onClose={() => setModal(null)} is3D={true} 
         actionButton={
-            <DownloadButton btnText={t("about.cv")} href="assets/cv-rodriguezcastro-ramiro.pdf" download="cv-rodriguezcastro-ramiro.pdf" />
-          }>
+          resumeURL ? (
+            <DownloadButton btnText={t("about.cv")} href={resumeURL} download="cv-rodriguezcastro-ramiro.pdf" />
+          ) : null
+        }>
         <CvModal />
       </Modal>
 

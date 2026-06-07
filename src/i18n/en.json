@@ -19,7 +19,9 @@
     "clickMe": "Click to see more",
     "status": {
       "title": "Status",
-      "available": "Open to work"
+      "Open": "Open to work",
+      "WorkingButOpen": "Working but open",
+      "Working": "Working"
     },
     "techStack": {
       "title": "My Stack"
