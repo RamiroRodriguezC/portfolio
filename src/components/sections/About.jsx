@@ -4,11 +4,13 @@ import Section from "../layout/Section.jsx";
 import Modal from "../modals/Modal.jsx";
 import AboutMeModal from "../modals/AboutMeModal.jsx";
 import TechStackModal from "../modals/TechStackModal.jsx";
+import CvModal from "../modals/CvModal.jsx";
 import MeCard from "../cards/about/MeCard.jsx";
 import StatusCard from "../cards/about/StatusCard.jsx";
 import StackCard from "../cards/about/StackCard.jsx";
 import CvCard from "../cards/about/CvCard.jsx";
 import CurrentProjectCard from "../cards/about/CurrentProjectCard.jsx";
+import DownloadButton from "../shared/buttons/DownloadButton.jsx";
 
 export default function About() {
   const { t } = useTranslation();
@@ -34,7 +36,12 @@ export default function About() {
           />
         </div>
 
-        <CvCard title={t("about.cvTitle")} description={t("about.cvDescription")} actionLabel={t("about.cv")} />
+        <CvCard 
+          title={t("about.cvTitle")} 
+          description={t("about.cvDescription")} 
+          actionLabel={t("about.cv")}
+          onOpen={() => setModal("cv")}
+         />
 
         <CurrentProjectCard
           title={t("about.currentProject.title")}
@@ -45,6 +52,13 @@ export default function About() {
 
       <Modal open={modal === "me"} onClose={() => setModal(null)}>
         <AboutMeModal />
+      </Modal>
+
+      <Modal open={modal === "cv"} onClose={() => setModal(null)} is3D={true} 
+        actionButton={
+            <DownloadButton btnText={t("about.cv")} href="assets/cv-rodriguezcastro-ramiro.pdf" download="cv-rodriguezcastro-ramiro.pdf" />
+          }>
+        <CvModal />
       </Modal>
 
       <Modal open={modal === "tech"} onClose={() => setModal(null)}>

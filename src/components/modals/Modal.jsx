@@ -1,34 +1,37 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import TiltWrapper from "../shared/TiltWrapper.jsx";
 
-export default function Modal({ open, onClose, children }) {
+export default function Modal({ open, onClose, is3D = false, actionButton, children }) {
+  if (!open) return null;
+
   return (
-    <AnimatePresence>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
-        >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.2 }}
-            onClick={(e) => e.stopPropagation()}
-            className="relative bg-card border border-border rounded-2xl max-w-lg w-full max-h-[80vh] overflow-y-auto p-6"
-          >
-            <button
-              onClick={onClose}
-              className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-muted hover:bg-muted-foreground/20 transition-colors text-muted-foreground"
-            >
-              &times;
-            </button>
-            {children}
-          </motion.div>
-        </motion.div>
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4">
+      {/* Backdrop de fondo quieto */}
+      <div className="absolute inset-0 bg-black/85 backdrop-blur-sm" onClick={onClose} />
+
+      {/* MODAL 3D PARA EL CV */}
+      {is3D ? (
+        <div className="relative z-10 w-full max-w-md flex flex-col items-center gap-6 pointer-events-none">
+          
+          {/* EL TILT WRAPPER: Ahora abraza de forma estricta al contenido del CV */}
+          <TiltWrapper active={true} className="w-full flex items-center justify-center pointer-events-auto">
+            <div className="w-full bg-transparent border-none shadow-none overflow-visible">
+              {children}
+            </div>
+          </TiltWrapper>
+
+          {/* EL BOTÓN DE ACCIÓN: Totalmente inmóvil, afuera del 3D y con espacio */}
+          <div className="pointer-events-auto mt-2">
+            {actionButton}
+          </div>
+
+        </div>
+      ) : (
+        /* MODALES COMUNES PLANOS: Mantienen tu diseño de siempre */
+        <div className="relative z-10 w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden p-6">
+          {children}
+        </div>
       )}
-    </AnimatePresence>
+    </div>
   );
 }

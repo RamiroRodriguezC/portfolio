@@ -12,7 +12,7 @@ export default function Hero() {
 
       <div className="flex flex-col items-center md:items-stretch">
         <div className="flex w-full max-w-6xl mx-auto gap-3 md:gap-14 relative z-10 flex-col md:flex-row items-center md:items-start text-center md:text-left">
-          <div className="w-full md:w-2/3">
+          <div className="md:ml-25 w-full md:w-2/3">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
