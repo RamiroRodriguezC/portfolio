@@ -18,10 +18,18 @@
     "title": "About me",
     "clickMe": "Click to see more",
     "status": {
-      "title": "Status",
-      "Open": "Open to work",
-      "WorkingButOpen": "Working but open",
-      "Working": "Working"
+      "Open": {
+        "title": "Open to work",
+        "description": "Available for new opportunities and collaborations"
+      },
+      "WorkingButOpen": {
+        "title": "Working but open",
+        "description": "Currently employed but open to interesting offers"
+      },
+      "Working": {
+        "title": "Working",
+        "description": "Fully engaged in current projects and commitments"
+      }
     },
     "techStack": {
       "title": "My Stack"

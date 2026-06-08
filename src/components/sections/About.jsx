@@ -32,7 +32,7 @@ export default function About() {
 
         <div className="md:col-span-6 grid grid-cols-1 gap-6">
           {employmentStatus && (
-            <StatusCard title={t("about.status.title")} status={employmentStatus} />
+            <StatusCard status={employmentStatus} />
           )}
 
           <StackCard

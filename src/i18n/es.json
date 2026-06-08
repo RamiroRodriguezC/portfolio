@@ -18,10 +18,18 @@
     "title": "Acerca de mí",
     "clickMe": "Hacé clic para ver más",
     "status": {
-      "title": "Disponibilidad",
-      "Open": "Abierto a propuestas",
-      "WorkingButOpen": "Trabajando pero abierto",
-      "Working": "Trabajando"
+      "Open": {
+        "title": "Abierto a propuestas",
+        "description": "Disponible para nuevas oportunidades y colaboraciones"
+      },
+      "WorkingButOpen": {
+        "title": "Trabajando pero abierto",
+        "description": "Actualmente empleado pero abierto a ofertas interesantes"
+      },
+      "Working": {
+        "title": "Trabajando",
+        "description": "Completamente enfocado en proyectos actuales"
+      }
     },
     "techStack": {
       "title": "Mi Stack"
