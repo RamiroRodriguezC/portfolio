@@ -1,10 +1,14 @@
 [
-  { "name": "React", "category": "frontend", "icon": "assets/icons/react.svg" },
-  { "name": "JavaScript", "category": "language", "icon": "assets/icons/javascript.svg" },
-  { "name": "Tailwind CSS", "category": "frontend", "icon": "assets/icons/tailwind.svg" },
-  { "name": "Framer Motion", "category": "frontend", "icon": "assets/icons/framer-motion.svg" },
-  { "name": "Node.js", "category": "backend", "icon": "assets/icons/nodejs.svg" },
-  { "name": "Git", "category": "tools", "icon": "assets/icons/git.svg" },
-  { "name": "UI/UX Design", "category": "design", "icon": "assets/icons/ui-ux.svg" },
-  { "name": "TypeScript", "category": "language", "icon": "assets/icons/typescript.svg" }
+  { "name": "React", "category": "frontend", "icon": "assets/icons/stack/react.svg" },
+  { "name": "JavaScript", "category": "language", "icon": "assets/icons/stack/javascript.svg" },
+  { "name": "Tailwind CSS", "category": "frontend", "icon": "assets/icons/stack/tailwind.svg" },
+  { "name": "Git", "category": "tools", "icon": "assets/icons/stack/git.svg" },
+  { "name": "MongoDB", "category": "database", "icon": "assets/icons/stack/mongodb.svg" },
+  { "name": "Python", "category": "language", "icon": "assets/icons/stack/python.svg" },
+  { "name": "C", "category": "language", "icon": "assets/icons/stack/C.svg" },
+  { "name": "SQL", "category": "database", "icon": "assets/icons/stack/sql.svg" },
+  { "name": "Java", "category": "language", "icon": "assets/icons/stack/java.svg" },
+  { "name": "Docker", "category": "tools", "icon": "assets/icons/stack/docker.svg" },
+  { "name": "n8n", "category": "tools", "icon": "assets/icons/stack/n8n.svg" },
+  { "name": "Node.js", "category": "backend", "icon": "assets/icons/stack/nodejs.svg" }
 ]

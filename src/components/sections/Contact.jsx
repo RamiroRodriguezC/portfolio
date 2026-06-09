@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { usePortfolioData } from "../../context/PortfolioDataContext.jsx";
 import Section from "../layout/Section.jsx";
+import MailMe from "../forms/MailMe.jsx";
 
 const socialIcons = {
   Linkedin: (
@@ -36,6 +37,7 @@ export default function Contact() {
         transition={{ duration: 0.5 }}
         className="max-w-xl mx-auto text-center"
       >
+        <MailMe />
         <p className="text-muted-foreground mb-8">{t("contact.description")}</p>
         {contactMail && (
           <button

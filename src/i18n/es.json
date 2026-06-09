@@ -45,26 +45,7 @@
   "experience": {
     "subtitle": "Trayectoria",
     "title": "Experiencia laboral",
-    "items": [
-      {
-        "role": "Experiencia 1",
-        "company": "Empresa",
-        "period": "Periodo",
-        "description": "Descripción del puesto."
-      },
-      {
-        "role": "Experiencia 2",
-        "company": "Empresa",
-        "period": "Periodo",
-        "description": "Descripción del puesto."
-      },
-      {
-        "role": "Experiencia 3",
-        "company": "Empresa",
-        "period": "Periodo",
-        "description": "Descripción del puesto."
-      }
-    ]
+    "items": []
   },
   "projects": {
     "subtitle": "Proyectos",
@@ -74,6 +55,15 @@
   "contact": {
     "subtitle": "Contacto",
     "title": "¿Tenés un proyecto en mente?",
+    "form": {
+      "email": "Tu email",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar. Intentá de nuevo."
+    },
     "description": "Si te gusta lo que viste y querés construir algo juntos, escribime. Siempre estoy abierto a charlar sobre nuevas ideas.",
     "cta": "Copiar mi email"
   },

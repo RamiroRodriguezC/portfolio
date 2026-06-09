@@ -44,7 +44,6 @@ export default function About() {
 
         <StackCard
           title={t("about.techStack.title")}
-          onOpen={() => setModal("tech")}
           className="md:col-span-8"
         />
       </div>

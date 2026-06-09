@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import StackData from "../../data/stack.json";
 import { useTranslation } from "react-i18next";
 
 const COLORS = [
@@ -13,22 +15,25 @@ const COLORS = [
 
 export default function TechStackModal() {
   const { t } = useTranslation();
-  const skills = t("skills", { returnObjects: true });
 
   return (
     <>
       <h2 className="text-lg font-bold mb-4">{t("about.techStack.title")}</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-        {skills.map((skill, i) => (
-          <div
-            key={skill}
-            className={`flex items-center gap-2 p-3 rounded-xl bg-gradient-to-br ${COLORS[i % COLORS.length]} text-white`}
+        {StackData.map((skill, i) => (
+          <motion.div
+            key={skill.name}
+            whileHover={{ scale: 1.05, y: -2 }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+            className={`flex items-center gap-2 p-3 rounded-xl bg-gradient-to-br ${COLORS[i % COLORS.length]} text-white shadow-md hover:shadow-xl`}
           >
-            <span className="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center text-sm font-bold">
-              {skill.charAt(0)}
-            </span>
-            <span className="text-sm font-medium">{skill}</span>
-          </div>
+            <img
+              src={skill.icon}
+              alt={skill.name}
+              className="w-8 h-8 rounded-lg bg-white/20 p-1.5 object-contain"
+            />
+            <span className="text-sm font-medium">{skill.name}</span>
+          </motion.div>
         ))}
       </div>
     </>
