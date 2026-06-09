@@ -1,0 +1,17 @@
+[
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/feed/",
+    "icon": "assets/icons/social/linkedin.png"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/RamiroRodriguezC",
+    "icon": "assets/icons/social/github.png"
+  },
+  {
+    "name": "Email",
+    "url": "mailto:ramirorodcas.dev@gmail.com",
+    "icon": "assets/icons/social/gmail.png"
+  }
+]

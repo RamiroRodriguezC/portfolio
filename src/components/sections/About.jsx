@@ -6,21 +6,18 @@ import Modal from "../modals/Modal.jsx";
 import AboutMeModal from "../modals/AboutMeModal.jsx";
 import TechStackModal from "../modals/TechStackModal.jsx";
 import CvModal from "../modals/CvModal.jsx";
+import SocialLinksModal from "../modals/SocialLinksModal.jsx";
 import MeCard from "../cards/about/MeCard.jsx";
 import StatusCard from "../cards/about/StatusCard.jsx";
+import SocialMediaCard from "../cards/about/SocialMediaCard.jsx";
 import StackCard from "../cards/about/StackCard.jsx";
 import CvCard from "../cards/about/CvCard.jsx";
-import CurrentProjectCard from "../cards/about/CurrentProjectCard.jsx";
 import DownloadButton from "../shared/buttons/DownloadButton.jsx";
 
 export default function About() {
   const { t } = useTranslation();
   const { data } = usePortfolioData();
   const [modal, setModal] = useState(null);
-
-  const skills = t("skills", { returnObjects: true });
-  const visibleSkills = skills.slice(0, 4);
-  const hiddenCount = skills.length - visibleSkills.length;
 
   const employmentStatus = data?.employmentStatus;
   const resumeURL = data?.resumeURL;
@@ -35,12 +32,7 @@ export default function About() {
             <StatusCard status={employmentStatus} />
           )}
 
-          <StackCard
-            title={t("about.techStack.title")}
-            skills={visibleSkills}
-            hiddenCount={hiddenCount}
-            onOpen={() => setModal("tech")}
-          />
+          <SocialMediaCard onOpenMore={() => setModal("social")} />
         </div>
 
         <CvCard 
@@ -50,10 +42,10 @@ export default function About() {
           resumeURL={resumeURL}
          />
 
-        <CurrentProjectCard
-          title={t("about.currentProject.title")}
-          projectName={t("about.currentProject.name")}
-          description={t("about.currentProject.description")}
+        <StackCard
+          title={t("about.techStack.title")}
+          onOpen={() => setModal("tech")}
+          className="md:col-span-8"
         />
       </div>
 
@@ -72,6 +64,10 @@ export default function About() {
 
       <Modal open={modal === "tech"} onClose={() => setModal(null)}>
         <TechStackModal />
+      </Modal>
+
+      <Modal open={modal === "social"} onClose={() => setModal(null)}>
+        <SocialLinksModal />
       </Modal>
     </Section>
   );

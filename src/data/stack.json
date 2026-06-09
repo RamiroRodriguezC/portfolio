@@ -1,0 +1,10 @@
+[
+  { "name": "React", "category": "frontend", "icon": "assets/icons/react.svg" },
+  { "name": "JavaScript", "category": "language", "icon": "assets/icons/javascript.svg" },
+  { "name": "Tailwind CSS", "category": "frontend", "icon": "assets/icons/tailwind.svg" },
+  { "name": "Framer Motion", "category": "frontend", "icon": "assets/icons/framer-motion.svg" },
+  { "name": "Node.js", "category": "backend", "icon": "assets/icons/nodejs.svg" },
+  { "name": "Git", "category": "tools", "icon": "assets/icons/git.svg" },
+  { "name": "UI/UX Design", "category": "design", "icon": "assets/icons/ui-ux.svg" },
+  { "name": "TypeScript", "category": "language", "icon": "assets/icons/typescript.svg" }
+]

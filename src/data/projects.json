@@ -1,0 +1,14 @@
+[
+  {
+    "id": "1",
+    "title": "Jukebox",
+    "image": "assets/projects/jukebox.png",
+    "description": {
+      "en": "Jukebox is a social platform to share your musical taste. You can review the albums and songs you listen to, discover new artists, and keep track of all the content you listened to. This project was presented and approved as the final project for the Programming III subject in my last year of college.",
+      "es": "Jukebox es una plataforma social para compartir tu gusto musical. Podés reseñar los álbumes y canciones que escuchés, descubrir nuevos artistas, y llevar el registro de todo el contenido que escuchaste. Este proyecto fue presentado y aprobado como proyecto final para la materia de Programacion III en mi ultimo año de carrera."
+    },
+    "tags": ["React", "JavaScript","mongoDB", "Node.js", "Express"],
+    "liveUrl": "https://jukebox-front-end.vercel.app/"
+  }
+
+]

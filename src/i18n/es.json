@@ -34,11 +34,6 @@
     "techStack": {
       "title": "Mi Stack"
     },
-    "currentProject": {
-      "title": "Proyecto actual",
-      "name": "Portfolio personal",
-      "description": "Construyendo mi portfolio con React + Vite + Tailwind + Framer Motion"
-    },
     "cv": "Descargar CV",
     "cvTitle": "Currículum",
     "cvDescription": "Conocé mi trayectoria y formación profesional.",
@@ -74,33 +69,6 @@
   "projects": {
     "subtitle": "Proyectos",
     "title": "Algunos trabajos recientes",
-    "items": [
-      {
-        "title": "Proyecto 1",
-        "description": "Descripción del proyecto.",
-        "tags": ["Tag"],
-        "liveUrl": "#"
-      },
-      {
-        "title": "Proyecto 2",
-        "description": "Descripción del proyecto.",
-        "tags": ["Tag"],
-        "liveUrl": "#"
-      },
-      {
-        "title": "Proyecto 3",
-        "description": "Descripción del proyecto.",
-        "tags": ["Tag"],
-        "liveUrl": "#"
-      },
-      {
-        "title": "Proyecto 4",
-        "description": "Descripción del proyecto.",
-        "tags": ["Tag"],
-        "liveUrl": "#"
-      }
-    ],
-    "placeholder": "Imagen del proyecto",
     "cta": "Ver proyecto"
   },
   "contact": {
@@ -111,15 +79,5 @@
   },
   "footer": {
     "madeWith": "Hecho con React + Vite + Tailwind + Framer Motion"
-  },
-  "skills": [
-    "React",
-    "JavaScript",
-    "Tailwind CSS",
-    "Framer Motion",
-    "Node.js",
-    "Git",
-    "UI/UX Design",
-    "TypeScript"
-  ]
+  }
 }

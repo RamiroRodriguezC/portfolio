@@ -8,14 +8,23 @@ export default function MeCard({ onOpen, buttonText }) {
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       onClick={onOpen}
-      className="md:col-span-6 bg-card border border-border rounded-2xl p-6 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-center gap-4 min-h-[350px] md:min-h-[500px]"
+      className="md:col-span-6 bg-card border border-border rounded-2xl pt-6 px-6 pb-0 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-between min-h-[350px] md:min-h-[500px] overflow-hidden"
     >
-      <div className="w-24 h-24 rounded-full bg-muted flex items-center justify-center">
-        <svg className="w-12 h-12 text-muted-foreground" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-        </svg>
+      <div className="flex items-center pt-8 md:pt-12">
+        <p className="text-sm text-muted-foreground">{buttonText}</p>
       </div>
-      <p className="text-sm text-muted-foreground">{buttonText}</p>
+
+      <div className="w-full flex justify-center">
+        <img
+          src="assets/MyFoto.png"
+          alt="Ramiro"
+          className="w-auto max-w-full h-auto max-h-[280px] md:max-h-[380px] object-contain"
+          style={{
+            filter:
+              "drop-shadow(0 0 2px oklch(0.63 0.24 285)) drop-shadow(0 0 6px oklch(0.63 0.24 285))",
+          }}
+        />
+      </div>
     </motion.button>
   );
 }
