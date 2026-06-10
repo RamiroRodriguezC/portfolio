@@ -25,7 +25,7 @@ export default function About() {
   return (
     <Section id="about" subtitle={t("about.subtitle")} title={t("about.title")}>
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 w-full">
-        <MeCard onOpen={() => setModal("me")} buttonText={t("about.clickMe")} />
+        <MeCard onOpen={() => setModal("me")} />
 
         <div className="md:col-span-6 grid grid-cols-1 gap-6">
           {employmentStatus && (
