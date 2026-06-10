@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
@@ -17,11 +18,37 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    const ids = ["about", "experience", "projects", "contact"];
+    const elements = ids.map((id) => document.getElementById(id)).filter(Boolean);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const intersecting = entries.find((e) => e.isIntersecting);
+        if (intersecting) {
+          setActiveSection(intersecting.target.id);
+        }
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const navLinks = [
     { label: t("nav.about"), href: "#about" },
     { label: t("nav.projects"), href: "#projects" },
     { label: t("nav.contact"), href: "#contact" },
   ];
+
+  const sectionTitles = {
+    "": t("nav.brand"),
+    about: t("nav.about"),
+    experience: t("nav.experience"),
+    projects: t("nav.projects"),
+    contact: t("nav.contact"),
+  };
 
   return (
     <motion.nav
@@ -38,14 +65,18 @@ export default function NavBar() {
             : "bg-card/60 backdrop-blur-sm border-border/50"
         }`}
       >
-        <a href="#" className="text-sm font-semibold tracking-tight mr-2">
+        <a href="#" className="text-sm font-semibold tracking-tight mr-2 text-muted-foreground">
           {t("nav.brand")}
         </a>
         {navLinks.map((link) => (
           <a
             key={link.href}
             href={link.href}
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className={`text-sm transition-colors ${
+              activeSection === link.href.slice(1)
+                ? "text-foreground"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
           >
             {link.label}
           </a>
@@ -60,8 +91,8 @@ export default function NavBar() {
 
       {/* Mobile bar */}
       <div className="md:hidden w-full flex items-center justify-between px-4 py-3 rounded-2xl border bg-card/60 backdrop-blur-sm border-border/50">
-        <a href="#" className="text-sm font-semibold tracking-tight">
-          {t("nav.brand")}
+        <a href="#" className="text-sm font-semibold tracking-tight text-muted-foreground">
+          {sectionTitles[activeSection]}
         </a>
         <div className="flex items-center gap-4">
           <button
@@ -82,29 +113,39 @@ export default function NavBar() {
         </div>
       </div>
 
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-6 right-6 mt-2 md:hidden overflow-hidden bg-card border border-border rounded-2xl"
-          >
-            <div className="flex flex-col px-6 py-4 gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {mobileOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
+          className="absolute top-full left-6 right-6 mt-2 md:hidden bg-card border border-border rounded-2xl"
+        >
+          <div className="flex flex-col px-6 py-4 gap-4">
+            {navLinks.map((link) => (
+              <button
+                key={link.href}
+                type="button"
+                onClick={() => {
+                  const id = link.href.slice(1);
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                  window.location.hash = id;
+                  setMobileOpen(false);
+                }}
+                className={`text-sm text-left transition-colors ${
+                  activeSection === link.href.slice(1)
+                    ? "text-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {link.label}
+              </button>
+            ))}
+          </div>
+        </motion.div>
+      )}
     </motion.nav>
   );
 }
