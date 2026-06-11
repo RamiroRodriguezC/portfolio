@@ -9,9 +9,9 @@
   },
   "hero": {
     "tagline": "Full-Stack Developer",
-    "heading": "Building web experiences that",
-    "headingAccent": "leave a mark",
-    "description": "I'm Ramiro, a web developer passionate about building digital products with React, clean design, and good practices.",
+    "heading": "Bringing ideas and solutions to ",
+    "headingAccent": "the screen",
+    "description": "I am Ramiro, a Full Stack developer and student of Applied Informatics at UTN. Focused on software development, building comprehensive projects that combine strong logic and best practices.",
     "cta": "See my work"
   },
   "about": {
@@ -42,7 +42,37 @@
     "cvDescription": "Check my professional background and education.",
     "meModal": {
       "title": "Ramiro",
-      "description": "Web developer passionate about creating unique digital experiences."
+      "description": {
+        "sections": [
+              { 
+                "title": "🎮 From Gaming to Coding",
+                "paragraphs": [
+                  "My connection to technology and the digital world began with our family computer and, like many of my generation, with video games.",
+                  "In fact, my first encounter with programming logic was entirely self-taught and without really knowing what it entailed: designing mechanics and configuring behaviors for interactive bosses on a server for a popular video game (Minecraft)."
+                  ]
+                },
+                {
+                  "title": "🎓 Education & Solid Foundations",
+                  "paragraphs": [
+                    "After high school, I formalized that curiosity with a Python diploma course at UTN, where I acquired the fundamentals of programming logic and had my first real contact with code.",
+                    "I enjoyed the curriculum and the ecosystem so much that, the following year, I started my Applied Computer Science degree at UTN (INSPT).",
+                    "Today, I have fully completed and passed all my coursework, and I only have one final exam left to graduate. University provided me with genuine engineering fundamentals—algorithms, databases, networks, and software architecture—key tools to design solutions with sound judgment and best practices."
+                ]
+                },
+                {
+                  "title": "🛠️ Adaptability & Focus",
+                  "paragraphs": [
+                    "I don't consider myself tied to a single stack. Although I currently build end-to-end applications primarily using React, Node.js, Tailwind, and MongoDB, my education at UTN provides me with the foundation and flexibility to quickly adapt to any technology stack, working with languages like C, Java, Python, or SQL, as well as automation tools like n8n and Docker."
+                  ]
+                },
+                {
+                  "title": "🚀 What I'm Looking For",
+                  "paragraphs": [
+                  "My first professional opportunity in the tech industry as a Trainee / Junior developer. I am ready to join a team where I can deliver immediate value, learn from experienced professionals, and keep growing by writing clean and efficient code."
+                ]
+}
+]
+}
     }
   },
   "experience": {

@@ -28,7 +28,7 @@ export default function Modal({ open, onClose, is3D = false, actionButton, child
         </div>
       ) : (
         /* MODALES COMUNES PLANOS: Mantienen tu diseño de siempre */
-        <div className="relative z-10 w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-hidden p-6">
+        <div className="relative z-10 w-full max-w-2xl bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl overflow-y-auto max-h-[85vh] p-6">
           {children}
         </div>
       )}

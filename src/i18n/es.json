@@ -1,4 +1,4 @@
-{
+﻿{
   "nav": {
     "brand": "Portfolio",
     "about": "Sobre mí",
@@ -9,9 +9,9 @@
   },
   "hero": {
     "tagline": "Full-Stack Developer",
-    "heading": "Creando experiencias web que",
-    "headingAccent": "dejan huella",
-    "description": "Soy Ramiro, desarrollador web apasionado por construir productos digitales con React, diseño limpio y buenas prácticas.",
+    "heading": "Llevando ideas y soluciones a ",
+    "headingAccent": "la pantalla",
+    "description": "Soy Ramiro, desarrollador Full Stack y estudiante de Informática Aplicada en la UTN. Enfocado en el desarrollo de software, construyendo proyectos integrales que combinan lógica sólida y buenas prácticas.",
     "cta": "Ver proyectos"
   },
   "about": {
@@ -42,7 +42,37 @@
     "cvDescription": "Conocé mi trayectoria y formación profesional.",
     "meModal": {
       "title": "Ramiro",
-      "description": "Desarrollador web apasionado por crear experiencias digitales únicas."
+      "description": {
+        "sections": [
+          {
+            "title": "🎮 Del juego al código",
+            "paragraphs": [
+              "Mi relación con la tecnología y el mundo digital comenzó con la computadora que había en mi casa y, como para muchos de mi generación, con los videojuegos.",
+              "De hecho, mi primer acercamiento a la lógica de programación fue de forma autodidacta y sin saber realmente qué conllevaba: diseñando mecánicas y configurando comportamientos de jefes (bosses) interactivos para un servidor de un popular videojuego (Minecraft)."
+            ]
+          },
+          {
+            "title": "🎓 Formación y bases sólidas",
+            "paragraphs": [
+              "Al terminar la secundaria, formalicé esa curiosidad con una diplomatura de Python en la UTN, donde adquirí las bases de la lógica de programación y tuve, ahora sí, mi primer contacto real con el código.",
+              "Me gustó tanto el contenido y el ecosistema que, al año siguiente, ya estaba comenzando la carrera de Informática Aplicada en la UTN (INSPT).",
+              "Hoy en día tengo la cursada completamente aprobada y finalizada, y solo me falta rendir un examen final para recibirme. La universidad me dio fundamentos de ingeniería reales: algoritmos, bases de datos, redes y arquitectura de software; herramientas clave para pensar soluciones con criterio y buenas prácticas."
+            ]
+          },
+          {
+            "title": "🛠️ Adaptabilidad y enfoque",
+            "paragraphs": [
+              "No me considero un desarrollador atado a un único stack. Aunque actualmente construyo aplicaciones integrales usando principalmente React, Node.js, Tailwind y MongoDB, mi formación en UTN me proporciona la base y la flexibilidad para adaptarme rápido a cualquier entorno tecnológico y trabajar con lenguajes como C, Java, Python o SQL, o herramientas de automatización como n8n y Docker."
+            ]
+          },
+          {
+            "title": "🚀 ¿Qué busco hoy?",
+            "paragraphs": [
+              "Mi primera oportunidad laboral en la industria tecnológica como Trainee / Junior. Estoy listo para sumarme a un equipo donde pueda aportar valor de inmediato, aprender de otros profesionales y seguir creciendo escribiendo código limpio y eficiente."
+            ]
+          }
+        ]
+      }
     }
   },
   "experience": {
@@ -74,3 +104,6 @@
     "madeWith": "Hecho con React + Vite + Tailwind + Framer Motion"
   }
 }
+
+
+
