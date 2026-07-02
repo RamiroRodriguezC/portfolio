@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 pointer-events-none" />
 
       <div className="flex flex-col items-center md:items-stretch">
-        <div className="flex w-full max-w-6xl mx-auto gap-3 md:gap-14 relative z-10 flex-col md:flex-row items-center md:items-start text-center md:text-left">
-          <div className="md:ml-25 w-full md:w-2/3">
+          <div className="flex w-full max-w-7xl mx-auto gap-6 md:gap-14 relative z-10 flex-col md:flex-row items-center md:items-start text-center md:text-left">
+          <div className="md:ml-16 w-full md:w-3/5">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="w-full md:w-1/3 max-w-[300px] overflow-hidden"
+            className="w-full md:w-2/5 max-w-[320px] overflow-hidden"
           >
             <img
               src="/assets/meOnSetupRender.png"

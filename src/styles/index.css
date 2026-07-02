@@ -1,46 +1,31 @@
 @import "tailwindcss";
+@import "./themes/dark.css" layer(base);
+@import "./themes/light.css" layer(base);
 
 @theme {
-  --color-primary: oklch(0.63 0.24 285);
-  --color-primary-foreground: oklch(1 0 0);
-  --color-secondary: oklch(0.55 0.22 310);
-  --color-secondary-foreground: oklch(1 0 0);
+  --color-primary: var(--color-primary-base);
+  --color-primary-foreground: var(--color-primary-foreground-base);
+  --color-secondary: var(--color-secondary-base);
+  --color-secondary-foreground: var(--color-secondary-foreground-base);
 
-  --color-background: oklch(0.145 0 0);
-  --color-foreground: oklch(0.985 0 0);
-  --color-muted: oklch(0.25 0 0);
-  --color-muted-foreground: oklch(0.6 0 0);
-  --color-card: oklch(0.205 0 0);
-  --color-card-foreground: oklch(0.985 0 0);
-  --color-border: oklch(0.3 0 0);
-  --color-destructive: oklch(0.55 0.25 25);
-  --color-accent: oklch(0.63 0.24 285);
-  --color-accent-foreground: oklch(1 0 0);
+  --color-background: var(--color-background-base);
+  --color-foreground: var(--color-foreground-base);
+  --color-muted: var(--color-muted-base);
+  --color-muted-foreground: var(--color-muted-foreground-base);
+  --color-card: var(--color-card-base);
+  --color-card-foreground: var(--color-card-foreground-base);
+  --color-border: var(--color-border-base);
+  --color-destructive: var(--color-destructive-base);
+  --color-accent: var(--color-accent-base);
+  --color-accent-foreground: var(--color-accent-foreground-base);
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Fira Code", ui-monospace, monospace;
+  --font-sans: var(--font-sans-base);
+  --font-mono: var(--font-mono-base);
+
+  --grid-color: var(--grid-color-base);
+  --grid-opacity: var(--grid-opacity-base);
 }
 
-:root {
-  --color-primary: oklch(0.63 0.24 285);
-  --color-primary-foreground: oklch(1 0 0);
-  --color-secondary: oklch(0.55 0.22 310);
-  --color-secondary-foreground: oklch(1 0 0);
-
-  --color-background: oklch(0.145 0 0);
-  --color-foreground: oklch(0.985 0 0);
-  --color-muted: oklch(0.25 0 0);
-  --color-muted-foreground: oklch(0.6 0 0);
-  --color-card: oklch(0.205 0 0);
-  --color-card-foreground: oklch(0.985 0 0);
-  --color-border: oklch(0.3 0 0);
-  --color-destructive: oklch(0.55 0.25 25);
-  --color-accent: oklch(0.63 0.24 285);
-  --color-accent-foreground: oklch(1 0 0);
-
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Fira Code", ui-monospace, monospace;
-}
 
 * {
   box-sizing: border-box;
@@ -55,4 +40,43 @@ body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   overflow-x: hidden
+}
+
+/* 1. EL CONTENEDOR DEL FONDO: Ahora es fijo y cubre TODA la pantalla por detrás */
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: -1; /* Se va al fondo absoluto */
+  pointer-events: none; /* CLAVE: El mouse ignora esta capa y te permite hacer scroll y clics abajo */
+  background-color: var(--color-background);
+  
+  /* Cuadrícula */
+  background-image: 
+    linear-gradient(to right, color-mix(in srgb, var(--grid-color) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--grid-color) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px);
+  
+  background-size: 56px 56px;
+}
+
+/* 2. LOS RESPLANDORES Y MÁSCARA (EFECTO AURORA + FADE) */
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  /* Capa 1: Resplandores de color (Aurora). Usamos tu violeta (--color-accent) */
+  background-image: 
+    radial-gradient(circle at 85% 20%, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 50%),
+    radial-gradient(circle at 15% 70%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 55%);
+}
+
+.bg-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  /* Capa 2: Máscara radial para que la cuadrícula se desvanezca suavemente hacia los bordes */
+  background: radial-gradient(circle at center, transparent 30%, var(--color-background) 95%);
 }

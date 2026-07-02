@@ -6,11 +6,14 @@ import Experience from "./components/sections/Experience.jsx";
 import Projects from "./components/sections/Projects.jsx";
 import Contact from "./components/sections/Contact.jsx";
 import Footer from "./components/layout/Footer.jsx";
+import ParticlesBackground from "./components/shared/ParticlesBackground.jsx";
 
 export default function App() {
   return (
     <PortfolioDataProvider>
-      <div className="flex justify-center w-full">
+      <div className="bg-grid" />
+      <ParticlesBackground />
+      <div className="relative z-10 flex justify-center w-full">
         <div className="w-full max-w-[1440px]">
           <NavBar />
           <Hero />

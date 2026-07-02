@@ -1,12 +1,24 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Sun, Moon } from "lucide-react";
 
 export default function NavBar() {
   const { t, i18n } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
+
+  const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "dark");
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleLang = () => {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
@@ -82,6 +94,13 @@ export default function NavBar() {
           </a>
         ))}
         <button
+          onClick={toggleTheme}
+          className="text-primary hover:text-primary/80 transition-colors ml-2"
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+        </button>
+        <button
           onClick={toggleLang}
           className="text-xs font-medium text-primary hover:text-primary/80 transition-colors uppercase ml-2"
         >
@@ -95,6 +114,13 @@ export default function NavBar() {
           {sectionTitles[activeSection]}
         </a>
         <div className="flex items-center gap-4">
+          <button
+            onClick={toggleTheme}
+            className="text-primary"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
           <button
             onClick={toggleLang}
             className="text-xs font-medium text-primary uppercase"

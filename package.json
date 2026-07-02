@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.0",
+    "@tsparticles/react": "^4.3.1",
+    "@tsparticles/slim": "^4.3.1",
     "firebase": "^12.14.0",
     "framer-motion": "^12.10.0",
     "i18next": "^26.3.1",
