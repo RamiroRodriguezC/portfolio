@@ -43,7 +43,7 @@ export default function StatusCard({ status }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: 0.1 }}
-      className={`relative overflow-hidden ${style.bg} border ${style.border} rounded-2xl p-6 flex items-stretch min-h-[130px]`}
+      className={`relative overflow-hidden ${style.bg} border ${style.border} rounded-2xl p-6 flex items-stretch min-h-[8.125rem]`}
     >
       <div className="relative z-10 flex flex-col justify-center w-[60%]">
         <h3 className={`text-xl font-bold tracking-tight ${style.titleText}`}>

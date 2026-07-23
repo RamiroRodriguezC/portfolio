@@ -12,7 +12,7 @@ export default function MeCard({ onOpen }) {
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
       onClick={onOpen}
-      className="md:col-span-6 bg-card border border-border rounded-2xl px-6 pb-6 pt-6 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-center gap-5 min-h-[350px] md:min-h-[500px]"
+      className="md:col-span-6 bg-card border border-border rounded-2xl px-6 pb-6 pt-6 text-left hover:border-primary/40 transition-colors flex flex-col items-center justify-center gap-5 min-h-[21.875rem] md:min-h-[31.25rem]"
     >
       <MePhoto />
 

@@ -5,7 +5,7 @@ export default function Hero() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative flex items-center justify-start overflow-hidden md:min-h-[620px] max-md:min-h-[100svh] max-md:pt-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative flex items-center justify-center overflow-hidden md:min-h-[38.75rem] max-md:min-h-[100svh] max-md:pt-20 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl -translate-x-1/2 pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-secondary/10 rounded-full blur-3xl translate-x-1/2 pointer-events-none" />
@@ -48,7 +48,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="w-full md:w-2/5 max-w-[320px] overflow-hidden"
+            className="w-full md:w-2/5 max-w-[20rem] overflow-hidden"
           >
             <img
               src="/assets/meOnSetupRender.png"

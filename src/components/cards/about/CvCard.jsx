@@ -11,7 +11,7 @@ export default function CvCard({ title, description, onOpen, resumeURL }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4, delay: 0.3 }}
-      className="md:col-span-4 bg-card border border-border rounded-2xl p-5 flex flex-col justify-between min-h-[225px] md:min-h-[350px]"
+      className="md:col-span-4 bg-card border border-border rounded-2xl p-5 flex flex-col justify-between min-h-[14.0625rem] md:min-h-[21.875rem]"
     >
       <div>
         <TiltedFrame onClick={onOpen}>

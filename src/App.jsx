@@ -14,7 +14,7 @@ export default function App() {
       <div className="bg-grid" />
       <ParticlesBackground />
       <div className="relative z-10 flex justify-center w-full">
-        <div className="w-full max-w-[1440px]">
+        <div className="w-full max-w-[120rem] mx-auto">
           <NavBar />
           <Hero />
           <About />

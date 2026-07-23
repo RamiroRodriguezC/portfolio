@@ -33,6 +33,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: clamp(16px, calc(16px + (100vw - 1440px) * 0.012), 32px);
 }
 
 body {
@@ -46,8 +47,8 @@ body {
 .bg-grid {
   position: fixed;
   inset: 0;
-  z-index: -1; /* Se va al fondo absoluto */
-  pointer-events: none; /* CLAVE: El mouse ignora esta capa y te permite hacer scroll y clics abajo */
+  z-index: -1;
+  pointer-events: none;
   background-color: var(--color-background);
   
   /* Cuadrícula */
@@ -71,12 +72,4 @@ body {
     radial-gradient(circle at 15% 70%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 55%);
 }
 
-.bg-grid::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
 
-  /* Capa 2: Máscara radial para que la cuadrícula se desvanezca suavemente hacia los bordes */
-  background: radial-gradient(circle at center, transparent 30%, var(--color-background) 95%);
-}
