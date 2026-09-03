@@ -20,18 +20,20 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-sm font-medium text-primary uppercase tracking-widest mb-4"
           >
-            <TypewriterTitle />
+            {t("hero.tagline")}
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-foreground"
           >
-            {t("hero.heading")}{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              {t("hero.headingAccent")}
+            <span className="block">
+              <TypewriterTitle />
+            </span>
+            <span className="block bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              {t("hero.typewriter.suffix")}
             </span>
           </motion.h1>
 
