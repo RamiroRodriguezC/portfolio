@@ -25,6 +25,8 @@
   "about": {
     "subtitle": "Sobre mí",
     "title": "Acerca de mí",
+    "sectionTitle": "Acerca de <1>mí</1>",
+    "sectionSubtitle": "Un vistazo modular a quién soy y qué hago.",
     "clickMe": "Hacé clic para ver más",
     "status": {
       "Open": {

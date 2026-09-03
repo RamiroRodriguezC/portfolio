@@ -25,6 +25,8 @@
   "about": {
     "subtitle": "About me",
     "title": "About me",
+    "sectionTitle": "About <1>Me</1>",
+    "sectionSubtitle": "A modular look at who I am and what I do.",
     "clickMe": "Click to see more",
     "status": {
       "Open": {

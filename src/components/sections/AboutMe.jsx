@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Trans, useTranslation } from "react-i18next";
 import MeCard from "../bento/MeCard";
 import StatusCard from "../bento/StatusCard";
 import SocialCards from "../bento/SocialCards";
@@ -6,6 +7,8 @@ import CvCard from "../bento/CvCard";
 import SkillsCard from "../bento/SkillsCard";
 
 export default function AboutMe() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="relative py-28 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
@@ -16,14 +19,14 @@ export default function AboutMe() {
           transition={{ duration: 0.6 }}
           className="mb-14"
         >
-          <p className="text-xs font-mono uppercase tracking-widest text-primary mb-3">
-            // 02 — Sobre mí
-          </p>
           <h2 className="font-heading text-4xl md:text-6xl font-extrabold leading-none">
-            Synaptic <span className="text-shimmer">Bento</span>
+            <Trans
+              i18nKey="about.sectionTitle"
+              components={{ 1: <span className="text-shimmer" /> }}
+            />
           </h2>
           <p className="text-muted-foreground mt-4 max-w-xl">
-            Un vistazo modular a quién soy, qué hago y cómo trabajamos juntos.
+            {t("about.sectionSubtitle")}
           </p>
         </motion.div>
 
