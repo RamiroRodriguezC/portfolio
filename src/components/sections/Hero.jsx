@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import TypewriterTitle from "../shared/TypewriterTitle.jsx";
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -19,7 +20,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-sm font-medium text-primary uppercase tracking-widest mb-4"
           >
-            {t("hero.tagline")}
+            <TypewriterTitle />
           </motion.p>
 
           <motion.h1

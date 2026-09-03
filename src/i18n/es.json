@@ -1,4 +1,4 @@
-﻿{
+{
   "nav": {
     "brand": "Portfolio",
     "about": "Sobre mí",
@@ -12,7 +12,17 @@
     "heading": "Llevando ideas y soluciones a ",
     "headingAccent": "la pantalla",
     "description": "Soy Ramiro, desarrollador Full Stack y estudiante de Informática Aplicada en la UTN. Enfocado en el desarrollo de software, construyendo proyectos integrales que combinan lógica sólida y buenas prácticas.",
-    "cta": "Ver proyectos"
+    "cta": "Ver proyectos",
+    "typewriter": {
+      "words": [
+        "Programando",
+        "Diseñando",
+        "Construyendo",
+        "Creando",
+        "Optimizando"
+      ],
+      "suffix": "experiencias"
+    }
   },
   "about": {
     "subtitle": "Sobre mí",
@@ -104,6 +114,3 @@
     "madeWith": "Hecho con React + Vite + Tailwind + Framer Motion"
   }
 }
-
-
-
