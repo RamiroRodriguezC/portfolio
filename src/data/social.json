@@ -10,6 +10,12 @@
     "icon": "assets/icons/social/github.png"
   },
   {
+    "name": "Discord",
+    "url": null,
+    "icon": "assets/icons/social/discord.png",
+    "copyToClipboard": "ramirodcas"
+  },
+  {
     "name": "Email",
     "url": "mailto:ramirorodcas.dev@gmail.com",
     "icon": "assets/icons/social/gmail.png"

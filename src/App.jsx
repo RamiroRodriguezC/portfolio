@@ -1,7 +1,7 @@
 import { PortfolioDataProvider } from "./context/PortfolioDataContext.jsx";
 import NavBar from "./components/layout/NavBar.jsx";
 import Hero from "./components/sections/Hero.jsx";
-import About from "./components/sections/About.jsx";
+import AboutMe from "./components/sections/AboutMe.jsx";
 import Experience from "./components/sections/Experience.jsx";
 import Projects from "./components/sections/Projects.jsx";
 import Contact from "./components/sections/Contact.jsx";
@@ -17,7 +17,7 @@ export default function App() {
         <div className="w-full max-w-[120rem] mx-auto">
           <NavBar />
           <Hero />
-          <About />
+          <AboutMe />
           <Experience />
           <Projects />
           <Contact />

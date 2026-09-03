@@ -18,7 +18,7 @@ export default function Projects() {
             key={project.id || i}
             project={project}
             index={i}
-            onOpenMore={setSelectedProject}
+            onReadMore={() => setSelectedProject(project)}
           />
         ))}
       </div>

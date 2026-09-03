@@ -2,13 +2,32 @@
   {
     "id": "1",
     "title": "Jukebox",
-    "image": "assets/projects/jukebox.png",
+    "folder": "jukebox",
+    "image": "assets/projects/jukebox/jukebox.png",
+    "gallery": [
+      "assets/projects/jukebox/gallery/Busqueda.png",
+      "assets/projects/jukebox/gallery/cancion.png",
+      "assets/projects/jukebox/gallery/perfil.png",
+      "assets/projects/jukebox/gallery/portada.png"
+    ],
     "description": {
       "en": "Jukebox is a social platform to share your musical taste. You can review the albums and songs you listen to, discover new artists, and keep track of all the content you listened to. This project was presented and approved as the final project for the Programming III subject in my last year of college.",
       "es": "Jukebox es una plataforma social para compartir tu gusto musical. Podés reseñar los álbumes y canciones que escuchés, descubrir nuevos artistas, y llevar el registro de todo el contenido que escuchaste. Este proyecto fue presentado y aprobado como proyecto final para la materia de Programacion III en mi ultimo año de carrera."
     },
     "tags": ["React", "JavaScript","mongoDB", "Node.js", "Express"],
     "liveUrl": "https://jukebox-front-end.vercel.app/"
+  },
+  {
+    "id": "2",
+    "title": "Handly",
+    "folder": "handly",
+    "image": "assets/projects/handly/handly.png",
+    "gallery": [],
+    "description": {
+      "en": "Handly is a donation coordination app built for the CoderHouse hackathon. Organizations launch campaigns with needed items (supplies), donors commit to donating a specific quantity without creating an account, receive an SMS-XXXX confirmation code, and bring the supplies to an organization pickup point where the code is verified. This prevents over-donation of useless items and aligns donations with actual needs. Built in collaboration with two teammates.",
+      "es": "Handly es una app de coordinación de donaciones construida para el hackathon de CoderHouse. Las organizaciones lanzan campañas con insumos necesarios, los donantes comprometen una cantidad sin necesidad de cuenta, reciben un código de confirmación SMS-XXXX, y llevan los insumos a un punto de acopio donde el código es verificado. Esto evita la sobre-donación de cosas inútiles y alinea las donaciones con las necesidades reales. Desarrollada en conjunto con dos colegas."
+    },
+    "tags": ["TypeScript", "Next.js", "supabase", "Make", "IA", "Tailwind"],
+    "liveUrl": "https://handly.angelcorzo.dev/"
   }
-
 ]

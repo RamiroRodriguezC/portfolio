@@ -21,6 +21,8 @@
 
   --font-sans: var(--font-sans-base);
   --font-mono: var(--font-mono-base);
+  --font-heading: var(--font-sans-base);
+  --font-body: var(--font-sans-base);
 
   --grid-color: var(--grid-color-base);
   --grid-opacity: var(--grid-opacity-base);
@@ -59,6 +61,14 @@ body {
   background-size: 56px 56px;
 }
 
+/* Variante de grid para uso interno (sin position:fixed) */
+.bg-grid-subtle {
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--grid-color) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--grid-color) calc(var(--grid-opacity) * 100%), transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
 /* 2. LOS RESPLANDORES Y MÁSCARA (EFECTO AURORA + FADE) */
 .bg-grid::before {
   content: "";
@@ -70,6 +80,104 @@ body {
   background-image: 
     radial-gradient(circle at 85% 20%, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 50%),
     radial-gradient(circle at 15% 70%, color-mix(in srgb, var(--color-accent) 8%, transparent), transparent 55%);
+}
+
+/* 3. RUIDO SUTIL SOBRE TODO EL FONDO */
+.bg-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* Paleta basesita (púrpura vibrante) */
+:root {
+  --color-basesita-purple: #6200EE;
+  --color-basesita-light-purple: #BB86FC;
+}
+
+/* Glassmorphism — efecto cristal translúcido */
+.glass {
+  background: color-mix(in srgb, var(--color-foreground) 4%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--color-foreground) 12%, transparent);
+}
+
+/* Animación de respiración sutil */
+.breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+/* Botón con efecto liquid-fill (gradiente animado) */
+.liquid-fill {
+  position: relative;
+  overflow: hidden;
+}
+.liquid-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+.liquid-fill:hover::before {
+  transform: translateX(100%);
+}
+
+/* Scrollbar sutil */
+.scroll-subtle {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+.scroll-subtle::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-subtle::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-subtle::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--color-foreground) 15%, transparent);
+  border-radius: 3px;
+}
+
+/* Textura de ruido para tarjetas */
+.card-noise {
+  position: relative;
+}
+.card-noise::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Shimmer de texto para títulos */
+.text-shimmer {
+  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-basesita-light-purple) 50%, var(--color-primary) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 
